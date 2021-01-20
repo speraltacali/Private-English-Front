@@ -1,0 +1,39 @@
+.form-date{
+    min-width: 150px;
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-field{
+    width: 100%;
+    text-align: center;
+}
+
+.check-box{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.check-margin{
+    margin: 0 10px;
+}
+
+.radio-group{
+    float: right;
+    position: relative;
+    top: 1.5em;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+.button-solicitud{
+    display: table-cell;
+    left: 17em;
+  }

@@ -1,0 +1,15 @@
+
+<mat-drawer-container>
+    <mat-drawer #drawer mode="side">
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]= "['/solicitud']">solicitud</a>
+        <a [routerLink]= "['/empleado']">Empleado</a>
+    </mat-drawer>
+
+    <div>
+        <button (click)="drawer.toggle();">Mostrar/Ocultar</button>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>
+

@@ -1,0 +1,116 @@
+<mat-horizontal-stepper>
+    <mat-step label="Datos Personales"> 
+      
+      <mat-card>
+        <h2>Ingrese los datos Personales</h2>
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>Nombres</mat-label>
+            <input matInput  placeholder="Ingresar Nombre" id="nombre" [(ngModel)]="personaDto.nombre" name="nombre" #name="ngModel">
+          </mat-form-field>
+        </form>
+      
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>Apellidos</mat-label>
+            <input matInput placeholder="Ingresar Apellido" id="apellido" [(ngModel)]="personaDto.apellido" name="apellido" #name="ngModel">
+          </mat-form-field>
+        </form>
+
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>Dni</mat-label>
+            <input matInput placeholder="Ingresar Dni" id="dni" [(ngModel)]="personaDto.dni" name="dni" #name="ngModel">
+          </mat-form-field>
+        </form>
+
+        <form class="form-date">
+          <mat-form-field color="accent" appearance="fill">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker1" id="fecha" [(ngModel)]="personaDto.fechaNacimiento" name="fecha" #name="ngModel">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <div class="radio-group">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Masculino</mat-radio-button>    
+              <mat-radio-button value="2">Femenino</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+        </form>
+
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>CUIL</mat-label>
+            <input matInput placeholder="Ingresar CUIL" id="cuil" [(ngModel)]="personaDto.cuil" name="cuil" #name="ngModel">
+          </mat-form-field>
+        </form>
+
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>Domicilio</mat-label>
+            <input matInput placeholder="Ingresar Domicilio(con numeracion)" id="domicilio" [(ngModel)]="personaDto.domicilio" name="domicilio" #name="ngModel">
+          </mat-form-field>
+        </form>
+
+        <form class="form-date">
+          <mat-form-field class="form-field">
+            <mat-label>E-Mail</mat-label>
+            <input matInput placeholder="Ingresar Correo Electronico" id="email" [(ngModel)]="personaDto.email" name="email" #name="ngModel">
+          </mat-form-field>
+        </form>
+
+        <form class="form-date">
+          <div>
+            <button mat-raised-button class="button-solicitud" (click)="Post()" color="primary">Enviar Solicitud</button>
+          </div>
+        </form>
+
+        <!-- <h1>Lista Users</h1>
+        <table class="table table-border table-sm">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Password</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of userList">
+              <td>{{user.user}}</td>
+              <td>{{user.password}}</td>
+              <td></td>
+            </tr>
+          </tbody>
+
+        </table>
+      -->
+
+      </mat-card>
+    </mat-step>
+
+    <mat-step label="Datos Pago">
+      <a>Ingrese Datos Pago</a> 
+      <form class="form-date">
+        <mat-form-field class="form-field">
+          <mat-label>Apellido</mat-label>
+          <input matInput placeholder="Ingresar Nombre">
+        </mat-form-field>
+      </form>
+    </mat-step>
+
+    <mat-step label="Terminos y Condiciones">
+      <a>Aceptar Terminos y Condiciones</a> 
+      <form class="form-date">
+        <mat-form-field class="form-field">
+          <mat-label>Apellido</mat-label>
+          <input matInput placeholder="Ingresar Nombre">
+        </mat-form-field>
+      </form>
+    </mat-step>
+
+
+
+</mat-horizontal-stepper>
