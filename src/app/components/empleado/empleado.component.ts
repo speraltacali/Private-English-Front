@@ -24,7 +24,7 @@ export class EmpleadoComponent implements OnInit {
   public GetAll()
   {
     let resp = this._service.get();
-    resp.subscribe(report=>this.dataSource.data=report as Persona[]);
+    let date = resp.subscribe(report=>this.dataSource.data=report as Persona[]);
   }
 
 }

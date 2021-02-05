@@ -11,6 +11,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatIconModule } from '@angular/material/icon'
+
 
 @NgModule({
     imports: [
@@ -24,7 +29,11 @@ import { MatRadioModule } from '@angular/material/radio';
         MatCardModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatRadioModule        
+        MatRadioModule,
+        MatDividerModule,
+        MatListModule,
+        MatToolbarModule,
+        MatIconModule        
     ],
     exports : [
         MatSidenavModule,
@@ -37,7 +46,11 @@ import { MatRadioModule } from '@angular/material/radio';
         MatCardModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatRadioModule
+        MatRadioModule,
+        MatDividerModule,
+        MatListModule,
+        MatToolbarModule,
+        MatIconModule
     ]
 })
 
