@@ -1,8 +1,8 @@
-import { Response } from 'src/app/components/Models/response';
+import { Response } from 'src/app/Shared/Models/response';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { from , Observable } from 'rxjs';
-import { Empresa } from 'src/app/components/Models/empresa';
+import { Empresa } from 'src/app/Shared/Models/empresa';
 
 const httpOption ={
     headers: new HttpHeaders({

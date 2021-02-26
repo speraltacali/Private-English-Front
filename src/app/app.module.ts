@@ -3,29 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { EmpresaComponent } from './components/empresa/empresa.component';
-import { HomeComponent } from './components/home/home.component';
-import { EmpleadoComponent } from './components/empleado/empleado.component';
-import { SolicitudComponent } from './components/alumno/solicitud/solicitud.component';
-import { UsuarioComponent } from './components/usuario/usuario.component';
+import { HomeComponent } from './Entidades/Home/nav-bar/home.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './module/material.module';
 import { routing } from './app.routing';
+import { UsuarioModule } from './Entidades/Usuario/usuario.module';
+import { AlumnoModule } from './Entidades/Alumno/alumno.module';
+import { HomeModule } from './Entidades/Home/home.module';
+
 
 //Angular Material
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EmpresaComponent,
-    HomeComponent,
-    UsuarioComponent,
-    SolicitudComponent,
-    EmpleadoComponent    
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +28,10 @@ import { routing } from './app.routing';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    routing
+    UsuarioModule,
+    AlumnoModule,
+    HomeModule,
+    routing     
   ],
   providers: [],
   bootstrap: [AppComponent]

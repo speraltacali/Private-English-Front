@@ -1,0 +1,12 @@
+<div class="login">
+    <form class="custom-form" method="post">
+      <h1>Login</h1>
+
+      <input matInput placeholder="Ingresar Usuario" id="usuario" [(ngModel)]="user.usuario" name="usuario" #name="ngModel">
+
+      <input matInput placeholder="Ingresar Password" id="password" [(ngModel)]="user.password" name="password" #name="ngModel">
+
+
+      <button type="submit" (click)="login()">Log in</button>
+    </form>
+  </div>
