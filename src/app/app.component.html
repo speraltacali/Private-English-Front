@@ -1,37 +1,44 @@
+  
+<mat-sidenav-container class="container" >
 
-<mat-drawer-container>
-    <mat-drawer #drawer mode="side">
+    <mat-sidenav #drawer mode="side" class="sidenav" mode="side">
 
-        <mat-list>
+        <mat-toolbar color="primary">Menu Principal</mat-toolbar>
+
+        <mat-nav-list>
             <mat-list-item [routerLink]="['/home']">Home</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/solicitud']">Solicitud</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/login']">Login</mat-list-item>
-        </mat-list>
-    </mat-drawer>
+        </mat-nav-list>
+        
+    </mat-sidenav>
 
+    <p>
+        <mat-toolbar color="primary">
+            
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            mat-raised-button color="primary" (click)="drawer.toggle();">
+                <mat-icon>menu</mat-icon>
+            </button> 
+
+            <span class="title">Private English</span>
+
+            <a mat-raised-button class ="button-login" color="accent" >Login</a>
+
+        </mat-toolbar>
+
+    </p>
+        
     <div>
-        <p>
-            <mat-toolbar color="primary">
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-                mat-raised-button color="primary" (click)="drawer.toggle();">
-                    <mat-icon>menu</mat-icon>
-                </button> 
-    
-                <span class="title">Private English</span>
-
-                <div class="example-spacer"></div>
-
-                <a mat-raised-button color="accent" >Login</a>
-
-            </mat-toolbar>
-
-        </p>
         <router-outlet></router-outlet>
     </div>
 
+</mat-sidenav-container>
 
 
-</mat-drawer-container>
+
+
+
 

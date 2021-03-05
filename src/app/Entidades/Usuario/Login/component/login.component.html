@@ -1,12 +1,31 @@
-<div class="login">
-    <form class="custom-form" method="post">
-      <h1>Login</h1>
+<div>
+  <mat-card class="form-date">
+   <mat-toolbar color="primary">
+     <h1 class="login">Login</h1>
+    </mat-toolbar>
 
-      <input matInput placeholder="Ingresar Usuario" id="usuario" [(ngModel)]="user.usuario" name="usuario" #name="ngModel">
-
-      <input matInput placeholder="Ingresar Password" id="password" [(ngModel)]="user.password" name="password" #name="ngModel">
-
-
-      <button type="submit" (click)="login()">Log in</button>
+   <br>
+    
+    <form >      
+      <mat-form-field class="form-field">
+        <input matInput placeholder="Ingresar el Usuario" type="text">
+      </mat-form-field>
     </form>
-  </div>
+
+    <br>
+
+    <form>
+      <mat-form-field class="form-field">
+        <input matInput placeholder="Ingresar el Constraseña" type="password">
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <button mat-flat-button class="btn btn-primary btn-block" color="primary">Ingresar</button>
+    
+
+  </mat-card>
+
+</div>
+

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+
 import { MatSidenavModule  } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { MatIconModule } from '@angular/material/icon'
         MatDividerModule,
         MatListModule,
         MatToolbarModule,
-        MatIconModule        
+        MatIconModule,
+        FlexLayoutModule        
     ],
     exports : [
         MatSidenavModule,
@@ -50,7 +53,8 @@ import { MatIconModule } from '@angular/material/icon'
         MatDividerModule,
         MatListModule,
         MatToolbarModule,
-        MatIconModule
+        MatIconModule,
+        FlexLayoutModule
     ]
 })
 
