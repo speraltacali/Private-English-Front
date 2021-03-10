@@ -8,7 +8,7 @@
     
     <form >      
       <mat-form-field class="form-field">
-        <input matInput placeholder="Ingresar el Usuario" type="text">
+        <input matInput placeholder="Ingresar el Usuario" type="text" id="usuario" name="usuario" [(ngModel)]="user.usuario" #name="ngModel">
       </mat-form-field>
     </form>
 
@@ -16,13 +16,13 @@
 
     <form>
       <mat-form-field class="form-field">
-        <input matInput placeholder="Ingresar el Constraseña" type="password">
+        <input matInput placeholder="Ingresar el Constraseña" type="password" id="password" name="password" [(ngModel)]="user.password" #name="ngModel">
       </mat-form-field>
     </form>
 
     <br>
 
-    <button mat-flat-button class="btn btn-primary btn-block" color="primary">Ingresar</button>
+    <button mat-flat-button class="btn btn-primary btn-block" color="primary" (click)= "login()" >Ingresar</button>
     
 
   </mat-card>

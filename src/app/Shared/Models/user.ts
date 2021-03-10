@@ -1,4 +1,5 @@
-export interface Usuario {
+export interface User {
     usuario: string;
-    password:  string;
+    token:  string;
+    cargo : number;
 }

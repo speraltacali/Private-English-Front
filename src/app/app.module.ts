@@ -4,13 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './module/material.module';
 import { routing } from './app.routing';
 import { UsuarioModule } from './Entidades/Usuario/usuario.module';
 import { AlumnoModule } from './Entidades/Alumno/alumno.module';
 import { HomeModule } from './Entidades/Home/home.module';
+import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 
 
 //Angular Material
@@ -31,7 +32,9 @@ import { HomeModule } from './Entidades/Home/home.module';
     HomeModule,
     routing     
   ],
-  providers: [],
+  providers: [
+    { provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
