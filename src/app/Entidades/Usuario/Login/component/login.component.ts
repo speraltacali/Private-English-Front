@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
   login(){
     this.auth.login(this.user).subscribe(response=>{
         if (response.exito === 1) {
-          this.router.navigate(['/login']);
+          this.router.navigate(['/home']);
         }
     })
   }
 
-  
+  logout(){
+    this.auth.logout();
+    this.router.navigate(['/login']);
+  }
+
 }

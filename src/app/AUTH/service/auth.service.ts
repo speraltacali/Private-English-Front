@@ -48,4 +48,14 @@ export class authService {
         localStorage.removeItem('usuario');
         this.usuarioSubject.next(null);
     }
+
+    sessionActivate(){
+        if(localStorage.getItem('usuario') === null){
+            return false
+        }
+        else{
+            return true;
+        }
+    }
+
 } 

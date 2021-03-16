@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 
-
 import { MatSidenavModule  } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -36,7 +36,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         MatListModule,
         MatToolbarModule,
         MatIconModule,
-        FlexLayoutModule        
+        FlexLayoutModule,
+        CommonModule        
     ],
     exports : [
         MatSidenavModule,
@@ -54,7 +55,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         MatListModule,
         MatToolbarModule,
         MatIconModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        CommonModule
     ]
 })
 

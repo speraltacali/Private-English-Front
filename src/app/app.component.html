@@ -15,27 +15,34 @@
         
     </mat-sidenav>
 
-    <p>
-        <mat-toolbar color="primary">
-            
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-            mat-raised-button color="primary" (click)="drawer.toggle();">
-                <mat-icon>menu</mat-icon>
-            </button> 
+    <mat-sidenav-content>
 
-            <span class="title">Private English</span>
-
-            <a mat-raised-button class ="button-login" color="accent" >Login</a>
-
-        </mat-toolbar>
-
-    </p>
+        <div style="height: 88vh;">
+            <p>
+                <mat-toolbar color="primary">
+                    
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+                    mat-raised-button color="primary" (click)="drawer.toggle();">
+                        <mat-icon>menu</mat-icon>
+                    </button> 
         
-    <div>
-        <router-outlet></router-outlet>
-    </div>
+                    <span class="title">Private English</span>
+        
+                    
+                    <a *ngIf="session()" mat-raised-button class ="button-login" (click)="Logout()" color="accent" >Login</a>
+                    
+        
+                </mat-toolbar>
+        
+            </p>
+    
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
 
 </mat-sidenav-container>
+
 
 
 
