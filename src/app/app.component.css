@@ -21,6 +21,13 @@
     max-width: 100%;
    }
 
+
+.perfil{
+    max-width: 100%;
+}
+.example-card{
+    max-width: 250px;
+}
 /*
 .container-router{
     display: flex;
