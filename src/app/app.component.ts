@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { authService } from './AUTH/service/auth.service';
+import { User } from './Shared/Models/user';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,16 @@ import { authService } from './AUTH/service/auth.service';
 export class AppComponent {
   title = 'Private-English';
 
+  private user : User;
+
   constructor(private auth: authService,
     private route: Router){
 
+      this.auth.usuario.subscribe(res => 
+        {
+          this.user = res;
+          console.log("El usuario es "+ this.user);
+        });
     }
 
   Logout(){

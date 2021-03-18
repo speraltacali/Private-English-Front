@@ -30,11 +30,11 @@
 }
 
 .titulo{
-    background-color: orangered;
+    background-color: rgba(245, 75, 13, 0.74);
 }
 
 .tituloBlanco{
-    background-color: orange;
+    background-color: rgb(255, 94, 0);
 }
 
 .colorLogout{

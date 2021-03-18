@@ -21,6 +21,7 @@ export class authService {
     url : string = "https://localhost:44347/api/Usuario/login";
 
     private usuarioSubject: BehaviorSubject<User>
+    public usuario: Observable<User>;
 
     public get usuarioData(): User{
         return this.usuarioSubject.value;
@@ -28,6 +29,7 @@ export class authService {
 
     constructor(private _http: HttpClient){
         this.usuarioSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('usuario')));
+        this.usuario = this.usuarioSubject.asObservable();
     }
 
     login(usuario: Login): Observable<Response> {
