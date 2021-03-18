@@ -28,6 +28,23 @@
 .example-card{
     max-width: 250px;
 }
+
+.titulo{
+    background-color: orangered;
+}
+
+.tituloBlanco{
+    background-color: orange;
+}
+
+.colorLogout{
+    background-color:black;
+}
+
+.segundaBarra{
+    background-color: coral;
+}
+
 /*
 .container-router{
     display: flex;

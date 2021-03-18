@@ -1,14 +1,14 @@
   
-<mat-sidenav-container >
+<mat-sidenav-container>
 
     <mat-sidenav #drawer mode="side" class="sidenav" mode="side">
 
-        <mat-toolbar color="primary">Menu Principal</mat-toolbar>
+        <mat-toolbar class="titulo">Menu Principal</mat-toolbar>
 
         <mat-card *ngIf="session()" class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Nombre y Apellido </mat-card-title>
+             
+              <mat-card-title>Apellido y Nombre</mat-card-title>
               <mat-card-subtitle>Cargo</mat-card-subtitle>
             </mat-card-header>
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
@@ -25,12 +25,14 @@
             </mat-card-actions>
           </mat-card>
 
-        <mat-nav-list>
+        <mat-nav-list class="titulo">
             <mat-list-item [routerLink]="['/home']">Home</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/solicitud']">Solicitud</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/login']">Login</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [routerLink]= "['/profesor']">Profesor</mat-list-item>
         </mat-nav-list>
         
     </mat-sidenav>
@@ -39,17 +41,17 @@
 
         <div style="height: 88vh;">
             <p>
-                <mat-toolbar color="primary">
+                <mat-toolbar class="titulo">
                     
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-                    mat-raised-button color="primary" (click)="drawer.toggle();">
+                    mat-raised-button class="tituloBlanco" (click)="drawer.toggle();">
                         <mat-icon>menu</mat-icon>
                     </button> 
         
                     <span class="title">Private English</span>
         
                     
-                    <a *ngIf="session()" mat-raised-button class ="button-login" (click)="Logout()" color="accent" >Login</a>
+                    <a *ngIf="session()" mat-raised-button class ="button-login" (click)="Logout()" color="accent">Login</a>
                     
         
                 </mat-toolbar>
