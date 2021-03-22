@@ -12,6 +12,8 @@ import { UsuarioModule } from './Entidades/Usuario/usuario.module';
 import { AlumnoModule } from './Entidades/Alumno/alumno.module';
 import { HomeModule } from './Entidades/Home/home.module';
 import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
+import { ProfesorModule } from './Entidades/Profesor/profesor.module';
+import { GaleriaComponent } from './Entidades/Home/Galeria/galeria.component';
 
 
 //Angular Material
@@ -19,7 +21,8 @@ import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
     UsuarioModule,
     AlumnoModule,
     HomeModule,
+    ProfesorModule,
     routing     
   ],
   providers: [
