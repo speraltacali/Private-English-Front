@@ -21,8 +21,7 @@ import { GaleriaComponent } from './Entidades/Home/Galeria/galeria.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GaleriaComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

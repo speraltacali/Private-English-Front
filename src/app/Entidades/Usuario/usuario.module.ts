@@ -14,7 +14,8 @@ import { MaterialModule } from 'src/app/module/material.module';
     CommonModule,
     MaterialModule,
     FormsModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModule,
+    MaterialModule
   ]
 })
 export class UsuarioModule { }
