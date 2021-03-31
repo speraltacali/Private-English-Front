@@ -13,7 +13,7 @@ import { AlumnoModule } from './Entidades/Alumno/alumno.module';
 import { HomeModule } from './Entidades/Home/home.module';
 import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 import { ProfesorModule } from './Entidades/Profesor/profesor.module';
-import { GaleriaComponent } from './Entidades/Home/Galeria/galeria.component';
+import { GaleriaComponent } from './Entidades/Empresa/Galeria/galeria.component';
 
 
 //Angular Material

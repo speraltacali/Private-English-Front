@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GaleriaComponent } from './Galeria/galeria.component';
+import { GaleriaComponent } from '../Empresa/Galeria/galeria.component';
 import { HomeComponent } from './nav-bar/home.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'galeria', component: GaleriaComponent}
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

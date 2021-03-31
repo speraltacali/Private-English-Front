@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProfesorRoutingModule } from './profesor-routing.module';
-import { ProfesorComponent } from './Listado/profesor.component';
+import { ListadoComponent } from './Listado/listado.component';
+import { MaterialModule } from 'src/app/module/material.module';
 
 
 @NgModule({
   declarations: [
-    ProfesorComponent
-  ],
+     ListadoComponent
+    ],
   imports: [
     CommonModule,
+    MaterialModule,
     ProfesorRoutingModule
   ]
 })

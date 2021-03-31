@@ -17,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { CommonModule } from '@angular/common';
         MatToolbarModule,
         MatIconModule,
         FlexLayoutModule,
-        CommonModule        
+        CommonModule,
+        BrowserAnimationsModule        
     ],
     exports : [
         MatSidenavModule,
@@ -56,7 +58,8 @@ import { CommonModule } from '@angular/common';
         MatToolbarModule,
         MatIconModule,
         FlexLayoutModule,
-        CommonModule
+        CommonModule,
+        BrowserAnimationsModule
     ]
 })
 

@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './nav-bar/home.component';
 import { EmpresaModule } from '../Empresa/empresa.module';
-import { GaleriaComponent } from './Galeria/galeria.component';
+
 import { MaterialModule } from 'src/app/module/material.module';
 
 
 @NgModule({
-  declarations: [HomeComponent ,
-  GaleriaComponent],
+  declarations: [HomeComponent
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,
