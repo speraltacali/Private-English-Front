@@ -30,19 +30,28 @@
 }
 
 .titulo{
-    background-color: rgba(245, 75, 13, 0.74);
+    background-color: rgb(23, 100, 172);
 }
 
 .tituloBlanco{
-    background-color: rgb(255, 94, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 .colorLogout{
     background-color:black;
 }
 
-.segundaBarra{
-    background-color: coral;
+.titulo-izquierdo{
+    background-color: rgb(27, 70, 163);
+}
+
+.sidenav{
+    background-color: rgb(23, 100, 172);
+    height: 100%;
+}
+
+.container-bar{
+    height: 1050px
 }
 
 /*

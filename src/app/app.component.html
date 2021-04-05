@@ -1,9 +1,9 @@
   
-<mat-sidenav-container>
+<mat-sidenav-container class="container-bar">
 
-    <mat-sidenav #drawer mode="side" class="sidenav" mode="side">
+    <mat-sidenav #drawer mode="side" class="sidenav" mode="side" class="sidenav">
 
-        <mat-toolbar class="titulo">Menu Principal</mat-toolbar>
+        <mat-toolbar class="titulo-izquierdo">Menu Principal</mat-toolbar>
 
         <mat-card *ngIf="session()" class="example-card">
             <mat-card-header>
@@ -26,13 +26,22 @@
           </mat-card>
 
         <mat-nav-list class="titulo">
+
+          <!-- Acceso Administrador-->
+
             <mat-list-item [routerLink]="['/home']">Home</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/solicitud']">Solicitud</mat-list-item>
             <mat-divider></mat-divider>
-            <mat-list-item [routerLink]= "['/login']">Login</mat-list-item>
+            <mat-list-item [routerLink]= "['/galeria']">Galeria</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/galeria']">Galeria</mat-list-item>
+            <mat-divider></mat-divider>
+
+          <!-- Acceso General-->
+
+            <mat-divider></mat-divider>
+            <mat-list-item *ngIf="session()" mat-raised-button (click)="Logout()" color="accent">Cerra Session</mat-list-item>
         </mat-nav-list>
         
     </mat-sidenav>
@@ -51,7 +60,7 @@
                     <span class="title">Private English</span>
         
                     
-                    <a *ngIf="session()" mat-raised-button class ="button-login" (click)="Logout()" color="accent">Login</a>
+                    <a #elseBlock [routerLink]= "['/login']" mat-raised-button class ="button-login" color="accent">Login</a>
                     
         
                 </mat-toolbar>
