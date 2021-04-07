@@ -19,6 +19,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Modulos Otros
+
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
     imports: [
@@ -39,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatIconModule,
         FlexLayoutModule,
         CommonModule,
-        BrowserAnimationsModule        
+        BrowserAnimationsModule,
+        FormsModule        
     ],
     exports : [
         MatSidenavModule,
@@ -59,7 +65,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatIconModule,
         FlexLayoutModule,
         CommonModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        FormsModule
     ]
 })
 

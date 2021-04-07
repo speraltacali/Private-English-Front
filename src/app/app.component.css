@@ -25,9 +25,6 @@
 .perfil{
     max-width: 100%;
 }
-.example-card{
-    max-width: 250px;
-}
 
 .titulo{
     background-color: rgb(23, 100, 172);
@@ -48,11 +45,14 @@
 .sidenav{
     background-color: rgb(23, 100, 172);
     height: 100%;
+    width: 300px;
+    
 }
 
 .container-bar{
     height: 1050px
 }
+
 
 /*
 .container-router{

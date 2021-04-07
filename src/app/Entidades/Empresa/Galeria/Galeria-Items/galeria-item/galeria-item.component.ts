@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Galeria } from 'src/app/Shared/Models/galeria';
+import { GaleriaService } from '../../../service/galeria.service';
+Response
 
 @Component({
   selector: 'app-galeria-item',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleriaItemComponent implements OnInit {
 
-  constructor() { }
+  galeria: Galeria = {titulo:'',imagen:null,estado:false,eliminado:false,empresaId:1};
+
+  constructor(public service: GaleriaService,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  Add(){
+    this.service.post(this.galeria).subscribe(response=>{
+      if(response.exito ===1 ){
+        console.log("Operacion Realizada con exito");
+      }
+      else{
+        console.log("Operacion Rechazada");
+      }
+    });
   }
 
 }

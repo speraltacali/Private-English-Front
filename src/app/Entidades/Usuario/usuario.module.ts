@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { LoginComponent } from './Login/component/login.component';
-import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/module/material.module';
 
 
@@ -13,7 +12,6 @@ import { MaterialModule } from 'src/app/module/material.module';
   imports: [
     CommonModule,
     MaterialModule,
-    FormsModule,
     UsuarioRoutingModule,
     MaterialModule
   ]

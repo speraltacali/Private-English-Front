@@ -3,13 +3,13 @@
     <form class="form-date">
       <mat-form-field class="form-field">
         <mat-label>Nombre Foto</mat-label>
-        <input matInput  placeholder="Ingresar Nombre" id="Galeria">
+        <input matInput  placeholder="Ingresar Nombre" id="titulo" name="titulo" [(ngModel)]="galeria.titulo" #name="ngModel">
       </mat-form-field>
 
       <br>
       <br>
 
-      <input type="file">
+      <input type="file" id="imagen" name="imagen" [(ngModel)]="galeria.imagen" #name="ngModel">
 
     </form>
 
@@ -17,6 +17,6 @@
 
     <form class="button">
       <div>
-        <button mat-raised-button class="button-solicitud" color="primary">Agregar Foto</button>
+        <button mat-raised-button class="button-solicitud" (click)="Add();" color="primary">Agregar Foto</button>
       </div>
-    </form>
+    </form> 

@@ -13,7 +13,6 @@ import { EmpresaModule } from '../Empresa/empresa.module';
   imports: [
     CommonModule,
     AlumnoRoutingModule,
-    FormsModule,
     EmpresaModule,
     MaterialModule
   ]
