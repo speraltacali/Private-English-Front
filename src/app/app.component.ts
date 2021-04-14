@@ -32,4 +32,8 @@ export class AppComponent {
     return this.auth.sessionActivate();
   }
 
+  listar(){
+    this.route.navigate(["listado"])
+  }
+
 }
