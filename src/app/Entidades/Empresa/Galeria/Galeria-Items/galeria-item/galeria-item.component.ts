@@ -11,9 +11,9 @@ Response
 })
 export class GaleriaItemComponent implements OnInit {
 
-  galeria: Galeria = {titulo:'',imagen:null,estado:false,eliminado:false,empresaId:1};
+  galeria: Galeria = {titulo:'',imagen:{},estado:false,eliminado:false,empresaId:1};
 
-  public filesToUpload: any[];  
+  public filesToUpload: any = [];  
 
   constructor(public service: GaleriaService,
     private router: Router) { }
@@ -22,9 +22,12 @@ export class GaleriaItemComponent implements OnInit {
   }
 
   Add(){
-
-    this.galeria.imagen = this.filesToUpload;
     console.log(this.galeria);
+
+    let formData = new FormData();
+    formData.append("file",this.filesToUpload[0]);
+
+    this.galeria.imagen = formData;
 
     this.service.post(this.galeria).subscribe(response=>{
       if(response.exito ===1 ){
@@ -36,8 +39,18 @@ export class GaleriaItemComponent implements OnInit {
     });
   }
 
+
+  funcionNueva(){
+    let formData = new FormData();
+    formData.append("file",this.filesToUpload[0]);
+    console.log("formData: ",formData);
+    console.log(this.filesToUpload);
+  }
+
   fileEvent(fileInput:any){
-    this.filesToUpload = <any[]> fileInput.target.files;
+    //this.filesToUpload = <any[]> fileInput.target.files;
+    this.filesToUpload.push(fileInput.target.files[0]);
+    
   }
 
 }
