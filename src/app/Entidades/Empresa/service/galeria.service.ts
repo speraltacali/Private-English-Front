@@ -27,7 +27,8 @@ export class GaleriaService {
   }
 
   public post(galeria: Galeria): Observable<Response>{
-    return this._http.post<Response>(this.url, galeria);
+    return this._http.post<Response>(this.url, (galeria), httpOption);
+    
   }
   
 }

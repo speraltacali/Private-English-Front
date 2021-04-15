@@ -13,6 +13,8 @@ export class GaleriaItemComponent implements OnInit {
 
   galeria: Galeria = {titulo:'',imagen:null,estado:false,eliminado:false,empresaId:1};
 
+  public filesToUpload: any[];  
+
   constructor(public service: GaleriaService,
     private router: Router) { }
 
@@ -20,6 +22,10 @@ export class GaleriaItemComponent implements OnInit {
   }
 
   Add(){
+
+    this.galeria.imagen = this.filesToUpload;
+    console.log(this.galeria);
+
     this.service.post(this.galeria).subscribe(response=>{
       if(response.exito ===1 ){
         console.log("Operacion Realizada con exito");
@@ -28,6 +34,10 @@ export class GaleriaItemComponent implements OnInit {
         console.log("Operacion Rechazada");
       }
     });
+  }
+
+  fileEvent(fileInput:any){
+    this.filesToUpload = <any[]> fileInput.target.files;
   }
 
 }

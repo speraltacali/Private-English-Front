@@ -9,7 +9,7 @@
       <br>
       <br>
 
-      <input type="file" id="imagen" name="imagen" [(ngModel)]="galeria.imagen" #name="ngModel">
+      <input type="file" (change)='fileEvent($event)'>
 
     </form>
 
