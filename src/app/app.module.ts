@@ -15,7 +15,6 @@ import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 import { ProfesorModule } from './Entidades/Profesor/profesor.module';
 import { GaleriaComponent } from './Entidades/Empresa/Galeria/galeria.component';
 
-
 //Angular Material
 
 

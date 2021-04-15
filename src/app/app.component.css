@@ -27,7 +27,7 @@
 }
 
 .titulo{
-    background-color: rgb(23, 100, 172);
+    background-color: #EC360F;
 }
 
 .tituloBlanco{
@@ -39,11 +39,11 @@
 }
 
 .titulo-izquierdo{
-    background-color: rgb(27, 70, 163);
+    background-color: #EC360F;
 }
 
 .sidenav{
-    background-color: rgb(23, 100, 172);
+    background-color: #EC360F;
     height: 100%;
     width: 300px;
     
