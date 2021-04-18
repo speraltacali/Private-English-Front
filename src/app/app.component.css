@@ -50,7 +50,9 @@
 }
 
 .container-bar{
-    height: 1050px
+    height: 1000px;
+    width: 100%;
+    
 }
 
 
