@@ -17,3 +17,12 @@
   width: 100%;
   text-align: center;
 }
+
+.title-login{
+  background-color: rgb(235, 116, 36);
+}
+
+.button-login{
+  width: 570px;
+  background-color: rgb(100, 96, 94);
+}
