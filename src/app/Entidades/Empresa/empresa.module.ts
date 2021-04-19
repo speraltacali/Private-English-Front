@@ -6,6 +6,7 @@ import { EmpresaComponent } from './component/empresa.component';
 import { MaterialModule } from '../../module/material.module';
 import { GaleriaComponent } from './Galeria/galeria.component';
 import { GaleriaItemComponent } from './Galeria/Galeria-Items/galeria-item/galeria-item.component';
+import { NovedadesComponent } from './Novedades/novedades.component';
 
 
 
@@ -14,7 +15,8 @@ import { GaleriaItemComponent } from './Galeria/Galeria-Items/galeria-item/galer
   declarations: [
     EmpresaComponent,
     GaleriaComponent,
-    GaleriaItemComponent
+    GaleriaItemComponent,
+    NovedadesComponent
   ],
   imports: [
     CommonModule,
