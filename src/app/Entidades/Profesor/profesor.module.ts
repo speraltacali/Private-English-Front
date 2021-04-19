@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ProfesorRoutingModule } from './profesor-routing.module';
 import { ListadoComponent } from './Listado/listado.component';
 import { MaterialModule } from 'src/app/module/material.module';
+import { AddComponent } from 'src/app/Entidades/Profesor/Listado/add/add.component'
 
 
 @NgModule({
   declarations: [
-     ListadoComponent
+     ListadoComponent,
+     AddComponent
     ],
   imports: [
     CommonModule,

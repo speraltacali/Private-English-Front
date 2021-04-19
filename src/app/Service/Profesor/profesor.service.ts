@@ -29,6 +29,9 @@ export class EmpresaService {
     return this._http.get<Response>(this.url);
   }
 
+  createProfesor(profesor:Profesor){
+    return this._http.post<Profesor>(this.url,profesor);
+  }
   //add(Empresa: Empresa):Observable<Response>{
     
   //}

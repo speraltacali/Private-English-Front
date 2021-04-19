@@ -27,4 +27,8 @@ export class ListadoComponent implements OnInit {
     this.router.navigate(["listado"]);
   }
 
+  Agregar(){
+    this.router.navigate(["add"]);
+  }
+
 }
