@@ -18,10 +18,12 @@ import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 // Modulos Otros
 
 import { FormsModule } from '@angular/forms';
+import { from } from 'rxjs';
 
 
 
@@ -45,6 +47,7 @@ import { FormsModule } from '@angular/forms';
         FlexLayoutModule,
         CommonModule,
         BrowserAnimationsModule,
+        MatExpansionModule,
         FormsModule        
     ],
     exports : [
@@ -66,6 +69,7 @@ import { FormsModule } from '@angular/forms';
         FlexLayoutModule,
         CommonModule,
         BrowserAnimationsModule,
+        MatExpansionModule,
         FormsModule
     ]
 })
