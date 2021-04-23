@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import { EmpresaService } from 'src/app/Service/Profesor/profesor.service';
 import { Profesor } from 'src/app/Shared/Models/profesor';
 
-
-
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
@@ -29,6 +27,11 @@ export class ListadoComponent implements OnInit {
 
   Agregar(){
     this.router.navigate(["add"]);
+  }
+
+  Editar(profesor:Profesor){
+    localStorage.setItem("id",profesor.id.toString());
+    this.router.navigate(["edit"]);
   }
 
 }

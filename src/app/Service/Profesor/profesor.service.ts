@@ -35,4 +35,11 @@ export class EmpresaService {
   //add(Empresa: Empresa):Observable<Response>{
     
   //}
+  getProfesorId(id:number){
+    return this._http.post<Profesor>(this.url,+"/"+id);
+  }
+
+  updateProfesor(profesor:Profesor){
+    return this._http.put<Profesor>(this.url+"/"+profesor.id,profesor);
+  }
 }

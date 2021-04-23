@@ -5,12 +5,14 @@ import { ProfesorRoutingModule } from './profesor-routing.module';
 import { ListadoComponent } from './Listado/listado.component';
 import { MaterialModule } from 'src/app/module/material.module';
 import { AddComponent } from 'src/app/Entidades/Profesor/Listado/add/add.component'
+import { EditComponent } from './Listado/edit/edit.component';
 
 
 @NgModule({
   declarations: [
      ListadoComponent,
-     AddComponent
+     AddComponent,
+     EditComponent
     ],
   imports: [
     CommonModule,
