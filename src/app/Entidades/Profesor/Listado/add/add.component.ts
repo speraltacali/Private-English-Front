@@ -6,7 +6,7 @@ import { Profesor } from 'src/app/Shared/Models/profesor';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
 

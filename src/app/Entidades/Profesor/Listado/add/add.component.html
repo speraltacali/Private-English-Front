@@ -45,13 +45,17 @@
     <input type="date" class="form-control" name="fechaNacimiento" placeholder="Ingresar Fecha Nacimiento" [(ngModel)]="profesorAux.fechaNacimiento" #name="ngModel">
   </div>
 
+  <br>
+
   <div class="form-group">
     <label>Sexo:</label>
     <input type="radio" name="hombre" value="h" > Hombre
     <input type="radio" name="mujer" value="m"  > Mujer
   </div>
 
-  <button (click)="GuardarProfesor(profesorAux)" class="btn btn-danger">Aceptar</button>
+  <br>
+
+  <button mat-raised-button color="primary" (click)="GuardarProfesor(profesorAux)" class="btn-crud">Agregar</button>
 
   </form>
  
