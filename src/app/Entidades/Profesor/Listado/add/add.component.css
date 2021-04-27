@@ -1,3 +1,20 @@
 .btn-crud{
-    width: 800px;
+    display: table-cell;
+    left: auto;
+}
+
+.btn-volver{
+    position: absolute;
+    right: 10px;
+}
+
+.form-control{
+    text-align: center;
+    border: black;
+}
+
+
+.form-group{
+    width: 100%;
+    text-align: center;
 }
