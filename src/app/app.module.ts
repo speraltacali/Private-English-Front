@@ -15,12 +15,15 @@ import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 import { ProfesorModule } from './Entidades/Profesor/profesor.module';
 import { GaleriaComponent } from './Entidades/Empresa/Galeria/galeria.component';
 
+import { BUCKET } from '@angular/fire/storage';
+import { UploadImageModule } from './Shared/Upload-Image/upload-image.module';
+
 //Angular Material
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,10 +35,12 @@ import { GaleriaComponent } from './Entidades/Empresa/Galeria/galeria.component'
     AlumnoModule,
     HomeModule,
     ProfesorModule,
+    UploadImageModule,
     routing     
   ],
   providers: [
-    { provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+    { provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    { provide : BUCKET, useValue:'gs://private-english-9d21e.appspot.com/'}
   ],
   bootstrap: [AppComponent]
 })

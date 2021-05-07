@@ -4,7 +4,7 @@ import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { EmpresaComponent } from './Entidades/Empresa/component/empresa.component';
 
 const appRoutes = [
-    { path: '' , redirectTo: '/home' , pathMatch: 'full'},
+    { path: '' , redirectTo: '/empresa' , pathMatch: 'full'},
   ];
 
   export const routing = RouterModule.forRoot(appRoutes);

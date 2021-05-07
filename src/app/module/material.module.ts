@@ -20,6 +20,11 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 
+// Modulos de Fire Base
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule} from '@angular/fire/storage';
+
 // Modulos Otros
 
 import { FormsModule } from '@angular/forms';
@@ -48,7 +53,9 @@ import { from } from 'rxjs';
         CommonModule,
         BrowserAnimationsModule,
         MatExpansionModule,
-        FormsModule        
+        FormsModule,
+        AngularFireModule,
+        AngularFireStorageModule        
     ],
     exports : [
         MatSidenavModule,
@@ -70,7 +77,9 @@ import { from } from 'rxjs';
         CommonModule,
         BrowserAnimationsModule,
         MatExpansionModule,
-        FormsModule
+        FormsModule,
+        AngularFireModule,
+        AngularFireStorageModule
     ]
 })
 

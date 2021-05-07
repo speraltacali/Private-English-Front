@@ -29,7 +29,7 @@
 
           <!-- Acceso Administrador-->
 
-            <mat-list-item [routerLink]="['/home']">Home</mat-list-item>
+            <mat-list-item [routerLink]="['/empresa']">Home</mat-list-item>
             <mat-divider></mat-divider>
             <mat-list-item [routerLink]= "['/solicitud']">Solicitud</mat-list-item>
             <mat-divider></mat-divider>
@@ -48,31 +48,45 @@
         
     </mat-sidenav>
 
-    <mat-sidenav-content>
 
-        <div style="height: 88vh;" >
-            <p>
-                <mat-toolbar class="titulo">
-                    
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-                    mat-raised-button class="tituloBlanco" (click)="drawer.toggle();">
-                        <mat-icon>menu</mat-icon>
-                    </button> 
-        
-                    <span class="title">Private English</span>
-        
-                    
-                    <a #elseBlock [routerLink]= "['/login']" mat-raised-button class ="button-login" color="accent">Login</a>
-                    
-        
-                </mat-toolbar>
-        
-            </p>
-    
-            <router-outlet></router-outlet>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+          mat-raised-button class="tituloBlanco" (click)="drawer.toggle();">
+              <mat-icon>menu</mat-icon>
+          </button> 
+          <ul></ul>
+          <a class="navbar-brand" href="#">Private English</a>
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Informacion de la empresa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Novedades</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Opciones
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Personal</a></li>
+                <li><a class="dropdown-item" href="#">Informacion</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </div>
+    </div>
+    </nav>
 
-    </mat-sidenav-content>
+    <br>
+
+    <router-outlet></router-outlet>
+
 
 </mat-sidenav-container>
 
