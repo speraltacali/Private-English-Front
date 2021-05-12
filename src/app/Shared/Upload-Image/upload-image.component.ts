@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FileItem } from './Models/file-item';
 
 @Component({
   selector: 'app-upload-image',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadImageComponent implements OnInit {
 
+  files:FileItem[] =[];
+  isOverDrop = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onUpload(){
+
   }
 
 }

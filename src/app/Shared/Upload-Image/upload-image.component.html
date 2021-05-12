@@ -1,1 +1,65 @@
-<p>upload-image works!</p>
+<div class="row">
+    <div class="col-md-4 mt-5" >
+        <div class="card">
+            <div class="card-header">
+                <span>Archivos</span>
+            </div>
+            <div class="card-body">
+                <div class="drop-zone">
+                    Drop-zone
+                </div>
+                <h4>Drop here your images</h4>
+                <img src="" alt="drop-images">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Listado de Archivos</h4>
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>File name</th>
+                            <th>Size</th>
+                            <th>Progress</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>file.name</td>
+                            <td>file.file.size</td>
+                            <td>file.uploadPercent</td>
+                            <td>file.downloadURL
+                                <div class="progress">
+                                    <div class="progress-bar">
+                                        role="progressbar"
+                                        uploadPercent %
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <div class="container-buttons">
+                        <button (click)="files = []" class="btn btn-danger">
+                            Borrar todo
+                        </button>
+                        <button (click)="onUpload()" class="btn btn-primary">
+                            Subir
+                        </button>
+                    </div>
+                </table>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
