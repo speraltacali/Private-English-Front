@@ -8,7 +8,7 @@ export class StorageService {
 
   private MEDIA_STORAGE_PATH = 'galeria';
 
-  constructor(private readonly storage : AngularFireStorage) {
+  constructor(private readonly storage: AngularFireStorage) {
   }
 
   uploadImage(images:FileItem[]){
