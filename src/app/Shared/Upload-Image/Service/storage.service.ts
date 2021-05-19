@@ -3,10 +3,13 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { FileItem } from '../Models/file-item';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class StorageService {
 
   private MEDIA_STORAGE_PATH = 'galeria';
+  //private readonly storage: AngularFireStorage;
 
   constructor(private readonly storage: AngularFireStorage) {
   }

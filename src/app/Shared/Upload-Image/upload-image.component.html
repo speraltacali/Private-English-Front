@@ -5,7 +5,12 @@
                 <span>Archivos</span>
             </div>
             <div class="card-body">
-                <div class="drop-zone">
+                <div 
+                    appNgGaleriaFiles 
+                    [files]="files"
+                    (mouseOver)="isOverDrop = $event"
+                    [ngClass]="{ 'file-over': isOverDrop }"
+                    class="drop-zone">
                     Drop-zone
                    <h4>Drop here your images</h4>
                      <img src="https://raw.githubusercontent.com/bezael/Login_Angular_9_Firebase_Bootstrap_4/master/src/assets/img/cloud.png" alt="drop-images">
@@ -30,7 +35,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let file of files">
                             <td>file.name</td>
                             <td>file.file.size</td>
                             <td>file.uploadPercent</td>
@@ -44,22 +49,18 @@
                             </td>
                         </tr>
                     </tbody>
-                    <div class="container-buttons">
-                        <button (click)="files = []" class="btn btn-danger">
-                            Borrar todo
-                        </button>
-                        <button (click)="onUpload()" class="btn btn-primary">
-                            Subir
-                        </button>
-                    </div>
                 </table>
+                <div class="container-buttons">
+                    <button (click)="files = []" class="btn btn-danger">
+                        Borrar todo
+                    </button>
+                    <button (click)="onUpload()" class="btn btn-primary btn-sm ml-auto">
+                        Subir
+                    </button>
+                </div>
             </div>
 
         </div>
-
-
-
-
 
     </div>
 </div>

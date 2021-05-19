@@ -2,7 +2,10 @@
     .col-md-4{
         .card{
 
-            height: 350px;
+            height: 350px;  
+            width: 300px;
+            float: right;
+
             .card-header{
                 text-transform: uppercase;
                 background: #2196f3 linear-gradient(180deg , #42a6f5,#2196f3) repeat-x;
@@ -40,6 +43,7 @@
     .col-md-8 {
         .card{
             height: 350px;
+            max-width: 900px;
             .card-header{
                 text-transform: uppercase;
                 background: #2196f3 linear-gradient(180deg , #42a6f5,#2196f3) repeat-x;
@@ -52,12 +56,13 @@
 
             .card-body{
                 padding-top: 0;
-                .container-buttons{
+                .container-buttons {
                     display: flex;
                     justify-content: space-between;
-                    .btn-primary{
+                    .btn-primary {
                         padding: 0 4rem;
                     }
+                    
                 }
             }
         }

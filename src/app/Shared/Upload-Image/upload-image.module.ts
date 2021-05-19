@@ -5,6 +5,7 @@ import { UploadImageRoutingModule } from './upload-image-routing.module';
 import { UploadImageComponent } from './upload-image.component';
 import { NgGaleriaFilesDirective } from './Directives/ng-galeria-files.directive'
 import { MaterialModule } from 'src/app/module/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MaterialModule } from 'src/app/module/material.module';
   imports: [
     CommonModule,
     UploadImageRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ]
 })
 export class UploadImageModule { }

@@ -1,70 +1,73 @@
 import { Directive, Input, Output ,EventEmitter, HostListener } from '@angular/core';
+
 import { FileItem } from '../Models/file-item';
 import { ImageValidator } from '../Helpers/imageValidator';
 
 
 @Directive({
-  selector: '[appNgGaleriaFiles]'
+  selector: '[appNgGaleriaFiles]',
 })
 export class NgGaleriaFilesDirective extends ImageValidator{
 
-  @Input()files:FileItem[] = [];
-  @Output()mouseOver: EventEmitter<boolean> = new EventEmitter();
+  @Input() files: FileItem[] = [];
+  @Output() mouseOver: EventEmitter<boolean> = new EventEmitter();
 
 
+  //Entra al mouse al contenedor
   @HostListener('dragover', ['$event'])
-  onDragEnter(event:any){
+  onDragEnter(event: any) {
     this.preventAndStop(event);
     this.mouseOver.emit(true);
   }
 
+  //Sale al mouse al contenedor
   @HostListener('dragleave', ['$event'])
-  onDragLeave(){
+  onDragLeave() {
     this.mouseOver.emit(false);
   }
 
+  
   @HostListener('drop', ['$event'])
-  onDrop(event:any){
-    const dataTrasnfer = this.getDataTrasnfer(event);
-    if(!dataTrasnfer){
+  onDrop(event: any) {
+    const dataTransfer = this.getDataTransfer(event);
+    if (!dataTransfer) {
       return;
     }
 
     this.preventAndStop(event);
-    this.extractFile(dataTrasnfer.files);
-    this.mouseOver.emit(false); 
+    this.extractFiles(dataTransfer.files);
+    this.mouseOver.emit(false);
   }
 
-
-  private getDataTrasnfer(event:any){
-    return event.dataTrasnfer
-    ? event.dataTrasnfer
-    : event.originalEvent.dataTrasnfer;
+  private getDataTransfer(event: any) {
+    return event.dataTransfer
+      ? event.dataTransfer
+      : event.originalEvent.dataTransfer;
   }
 
-  private extractFile(fileList:FileList):void{
-    for(const property  in Object.getOwnPropertyNames(fileList)){
+  private extractFiles(fileList: FileList): void {
+    for (const property in Object.getOwnPropertyNames(fileList)) {
       const tempFile = fileList[property];
-      if(this.canBeUploaded(tempFile)){
+      if (this.canBeUploaded(tempFile)) {
         const newFile = new FileItem(tempFile);
         this.files.push(newFile);
       }
     }
   }
 
-  private canBeUploaded(file:File):boolean{
-    if(!this.ckeckDropped(file.name, this.files) &&
-    this.validateType(file.type)){
+  private canBeUploaded(file: File): boolean {
+    if (
+      !this.ckeckDropped(file.name, this.files) &&
+      this.validateType(file.type)
+    ) {
       return true;
-    }
-    else{
+    } else {
       return false;
     }
   }
 
-  private preventAndStop(event:any):void{
-    event.preventDefult();
-    event.StopPropagation();
+  private preventAndStop(event: any): void {
+    event.preventDefault();
+    event.stopPropagation();
   }
-
 }
