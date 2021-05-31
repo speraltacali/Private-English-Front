@@ -11,10 +11,13 @@ export class StorageService {
   private MEDIA_STORAGE_PATH = 'galeria';
   //private readonly storage: AngularFireStorage;
 
-  constructor(private readonly storage: AngularFireStorage) {
+  constructor(private storage: AngularFireStorage) {
   }
 
   uploadImage(images:FileItem[]){
+
+    console.log("Entro al metodo service ");
+
     for(const item of images){
       item.uploadig = true;
 

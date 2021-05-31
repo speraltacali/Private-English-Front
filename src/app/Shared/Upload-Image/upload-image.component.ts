@@ -15,12 +15,16 @@ export class UploadImageComponent{
 
   files:FileItem[] =[];
   isOverDrop = false;
-  private readonly storage: StorageService;
+  //private readonly storage: StorageService;
 
-  constructor(){}
+  constructor(public storageService: StorageService){
+
+  }
 
   onUpload():void{
-    this.storage.uploadImage(this.files);
+    
+    console.log(this.files);
+    this.storageService.uploadImage(this.files);
   }
 
 }

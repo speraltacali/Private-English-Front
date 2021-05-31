@@ -6,6 +6,7 @@ import { UploadImageComponent } from './upload-image.component';
 import { NgGaleriaFilesDirective } from './Directives/ng-galeria-files.directive'
 import { MaterialModule } from 'src/app/module/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StorageService } from './Service/storage.service';
 
 
 @NgModule({
