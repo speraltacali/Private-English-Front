@@ -1,3 +1,4 @@
+import { DecimalPipe } from "@angular/common";
 import { Observable } from "rxjs";
 
 export class FileItem{

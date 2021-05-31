@@ -7,6 +7,11 @@ import { NgGaleriaFilesDirective } from './Directives/ng-galeria-files.directive
 import { MaterialModule } from 'src/app/module/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageService } from './Service/storage.service';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
+
 
 
 @NgModule({
@@ -15,7 +20,10 @@ import { StorageService } from './Service/storage.service';
     CommonModule,
     UploadImageRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
   ]
 })
 export class UploadImageModule { }

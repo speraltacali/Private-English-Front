@@ -36,14 +36,12 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let file of files">
-                            <td>file.name</td>
-                            <td>file.file.size</td>
-                            <td>file.uploadPercent</td>
-                            <td>file.downloadURL
+                            <td>{{file.name}}</td>
+                            <td>{{ file.file.size / 1024 | number: ".2-2" }} KB</td>
+                            <td *ngIf="file.uploadPercent | async as uploadPercent">
                                 <div class="progress">
-                                    <div class="progress-bar">
-                                        role="progressbar"
-                                        uploadPercent %
+                                    <div class="progress-bar" role="progressbar" [ngStyle]="{width : uploadPercent + '%'}">
+                                        {{uploadPercent | number: "1.0-0"}} %
                                     </div>
                                 </div>
                             </td>

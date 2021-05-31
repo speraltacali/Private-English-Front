@@ -34,6 +34,8 @@ export class StorageService {
         })
       ).subscribe();
     }
+
+    console.log("Verificar si subio imagen");
   }
 
   private  generateFileName(name:string):string{
