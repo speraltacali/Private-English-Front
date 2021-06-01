@@ -4,7 +4,7 @@
         <h1 class="fw-light">Galeria - Pagina Principal</h1>
         <p class="lead text-muted">Aqui puede crear , eliminar y modificar las imagenes que se presentaran en la pagina de inicio de la web</p>
         <p>
-          <button mat-flat-button class="btn btn-primary btn-block" color="primary" (click)= "AbrirDialog()" >Agregar Foto</button>
+          <button mat-flat-button class="btn btn-primary btn-block" color="primary" [routerLink]= "['/upload-image']" >Agregar Foto</button>
         </p>
       </div>
     </div>
