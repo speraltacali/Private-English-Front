@@ -11,11 +11,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { GaleriaComponent } from './Componentes/Galeria/galeria.component';
 
 
 
 @NgModule({
-  declarations: [UploadImageComponent, NgGaleriaFilesDirective],
+  declarations: [UploadImageComponent,
+      NgGaleriaFilesDirective,
+      GaleriaComponent,],
   imports: [
     CommonModule,
     UploadImageRoutingModule,

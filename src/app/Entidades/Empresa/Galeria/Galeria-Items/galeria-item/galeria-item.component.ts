@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Galeria } from 'src/app/Shared/Models/galeria';
-import { GaleriaService } from '../../../service/galeria.service';
+import { GaleriaService } from 'src/app/Service/Galeria/galeria.service';
 Response
 
 @Component({
