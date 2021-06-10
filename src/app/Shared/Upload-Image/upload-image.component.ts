@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { empty } from 'rxjs';
 import { UsuarioService } from 'src/app/Entidades/Alumno/Service/alumno.service';
 import { FileItem } from './Models/file-item';
 import { StorageService } from './Service/storage.service';
@@ -13,7 +14,7 @@ import { StorageService } from './Service/storage.service';
 })
 export class UploadImageComponent{
 
-  files:FileItem[] =[];
+  files:FileItem[] = [] ;
   isOverDrop = false;
   //private readonly storage: StorageService;
 

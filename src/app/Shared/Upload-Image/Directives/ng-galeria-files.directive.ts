@@ -29,6 +29,8 @@ export class NgGaleriaFilesDirective extends ImageValidator{
   
   @HostListener('drop', ['$event'])
   onDrop(event: any) {
+
+    console.log(event);
     const dataTransfer = this.getDataTransfer(event);
     if (!dataTransfer) {
       return;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { GaleriaItemComponent } from './Galeria-Items/galeria-item/galeria-item.component';
+import { GaleriaItemComponent } from './Galeria-Items/galeria-item.component';
 
 @Component({
   selector: 'app-galeria',
