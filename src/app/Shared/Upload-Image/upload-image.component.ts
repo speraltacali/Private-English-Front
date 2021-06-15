@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { empty } from 'rxjs';
 import { UsuarioService } from 'src/app/Entidades/Alumno/Service/alumno.service';
+import { GaleriaService } from 'src/app/Service/Galeria/galeria.service';
 import { FileItem } from './Models/file-item';
 import { StorageService } from './Service/storage.service';
 
@@ -18,7 +19,7 @@ export class UploadImageComponent{
   isOverDrop = false;
   //private readonly storage: StorageService;
 
-  constructor(public storageService: StorageService){
+  constructor(public storageService: StorageService, public galeriaService: GaleriaService){
 
   }
 

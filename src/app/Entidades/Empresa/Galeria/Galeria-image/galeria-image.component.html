@@ -6,7 +6,8 @@
             </div>
             <div class="card-body">
                 <div 
-                    appNgGaleriaFiles
+                    appNgGaleriaFiles 
+                    [files]="files"
                     (mouseOver)="isOverDrop = $event"
                     [ngClass]="{ 'file-over': isOverDrop }"
                     class="drop-zone">
@@ -14,13 +15,14 @@
                    <h4>Drop here your images</h4>
                      <img src="https://raw.githubusercontent.com/bezael/Login_Angular_9_Firebase_Bootstrap_4/master/src/assets/img/cloud.png" alt="drop-images">
                 </div>
-                <br>
+                
                 <div>
                     <mat-form-field class="input-titulo">
                         <mat-label>Titulo</mat-label>
-                        <textarea matInput placeholder="Ingrese el titulo de la imagen."></textarea>
+                        <textarea matInput  [(ngModel)]="galeria.titulo" placeholder="Ingrese el titulo de la imagen."></textarea>
                     </mat-form-field>
                 </div>
+
             </div>
         </div>
     </div>
@@ -40,12 +42,28 @@
                             <th>URL</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr *ngFor="let file of files">
+                            <td>{{file.name}}</td>
+                            <td>{{ file.file.size / 1024 | number: ".2-2" }} KB</td>
+                            <td *ngIf="file.uploadPercent | async as uploadPercent">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" [ngStyle]="{width : uploadPercent + '%'}">
+                                        {{uploadPercent | number: "1.0-0"}} %
+                                    </div>
+                                </div>
+                            </td>
+                            <td *ngIf="file.downloadURL | async as downloadURL"> 
+                                <a [href]="downloadURL" target="_blank">Download URL</a>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div class="container-buttons">
-                    <button  class="btn btn-danger">
-                        Borrar
+                    <button (click)="files = null" class="btn btn-danger">
+                        Borrar todo
                     </button>
-                    <button  class="btn btn-primary btn-sm ml-auto">
+                    <button (click)="CargarImagen()" [disabled]="files === null" class="btn btn-primary btn-sm ml-auto">
                         Subir
                     </button>
                 </div>

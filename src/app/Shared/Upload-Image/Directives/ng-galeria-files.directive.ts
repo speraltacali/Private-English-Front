@@ -30,7 +30,6 @@ export class NgGaleriaFilesDirective extends ImageValidator{
   @HostListener('drop', ['$event'])
   onDrop(event: any) {
 
-    console.log(event);
     const dataTransfer = this.getDataTransfer(event);
     if (!dataTransfer) {
       return;
@@ -42,16 +41,23 @@ export class NgGaleriaFilesDirective extends ImageValidator{
   }
 
   private getDataTransfer(event: any) {
+
+    console.log(event.dataTransfer);
+
     return event.dataTransfer
       ? event.dataTransfer
       : event.originalEvent.dataTransfer;
   }
 
   private extractFiles(fileList: FileList): void {
+
     for (const property in Object.getOwnPropertyNames(fileList)) {
       const tempFile = fileList[property];
       if (this.canBeUploaded(tempFile)) {
         const newFile = new FileItem(tempFile);
+
+        this.files.pop();
+
         this.files.push(newFile);
       }
     }

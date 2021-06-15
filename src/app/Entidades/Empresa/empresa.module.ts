@@ -8,6 +8,7 @@ import { GaleriaComponent } from './Galeria/galeria.component';
 import { GaleriaItemComponent } from './Galeria/Galeria-Items/galeria-item.component';
 import { NovedadesComponent } from './Novedades/novedades.component';
 import { GaleriaImageComponent } from './Galeria/Galeria-image/galeria-image.component';
+import { NgGaleriaFilesDirective } from './Galeria/Directives/galeria-image.directive';
 
 
 
@@ -16,6 +17,7 @@ import { GaleriaImageComponent } from './Galeria/Galeria-image/galeria-image.com
   declarations: [
     EmpresaComponent,
     GaleriaComponent,
+    NgGaleriaFilesDirective,
     GaleriaItemComponent,
     NovedadesComponent,
     GaleriaImageComponent
