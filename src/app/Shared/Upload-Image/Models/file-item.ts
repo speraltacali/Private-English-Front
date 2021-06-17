@@ -5,6 +5,7 @@ export class FileItem{
     public name : string;
     public uploadig: boolean;
     public uploadPercent: Observable<number>;
+    public Url: string;
     public downloadURL: Observable<string>;
 
 

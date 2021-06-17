@@ -11,7 +11,7 @@ Response
 })
 export class GaleriaItemComponent implements OnInit {
 
-  galeria: Galeria = {titulo:'',imagen:{},estado:false,eliminado:false,empresaId:1};
+  galeria: Galeria = {titulo:'',imagen:'',estado:false,eliminado:false,empresaId:1};
 
   public filesToUpload: any = [];  
 
@@ -27,7 +27,7 @@ export class GaleriaItemComponent implements OnInit {
     let formData = new FormData();
     formData.append("file",this.filesToUpload[0]);
 
-    this.galeria.imagen = formData;
+    //this.galeria.imagen = formData;
 
     this.service.post(this.galeria).subscribe(response=>{
       if(response.exito ===1 ){

@@ -1,6 +1,6 @@
 export interface Galeria{
     titulo : string,
-    imagen : any,
+    imagen : string,
     estado : boolean ,
     eliminado : boolean,
     empresaId : number

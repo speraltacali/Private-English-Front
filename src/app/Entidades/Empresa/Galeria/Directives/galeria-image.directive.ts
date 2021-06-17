@@ -16,6 +16,7 @@ import { FileItem } from '../../../../Shared/Upload-Image/Models/file-item';
     //Entra al mouse al contenedor
     @HostListener('dragover', ['$event'])
     onDragEnter(event: any) {
+      console.log("Dentro del class");
       this.preventAndStop(event);
       this.mouseOver.emit(true);
     }
@@ -23,13 +24,15 @@ import { FileItem } from '../../../../Shared/Upload-Image/Models/file-item';
     //Sale al mouse al contenedor
     @HostListener('dragleave', ['$event'])
     onDragLeave() {
+      console.log("Fuera del class");
       this.mouseOver.emit(false);
     }
   
     
     @HostListener('drop', ['$event'])
     onDrop(event: any) {
-  
+      
+      console.log(event);
       const dataTransfer = this.getDataTransfer(event);
       if (!dataTransfer) {
         return;
@@ -53,6 +56,8 @@ import { FileItem } from '../../../../Shared/Upload-Image/Models/file-item';
   
       for (const property in Object.getOwnPropertyNames(fileList)) {
         const tempFile = fileList[property];
+        console.log(Object.getOwnPropertyNames(fileList));
+        console.log(tempFile);
         if (this.canBeUploaded(tempFile)) {
           const newFile = new FileItem(tempFile);
   

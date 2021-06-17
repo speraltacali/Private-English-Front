@@ -15,16 +15,11 @@ export class GaleriaImageComponent{
   galeria: Galeria = {titulo:'',imagen:'',estado:false,eliminado:false,empresaId:1};
   isOverDrop = false;
 
-  constructor(private readonly _imagenService: GaleriaImageService , private _galeriaService: GaleriaService ) { }
+  constructor(public _imagenService: GaleriaImageService ) { }
 
 
-  CargarImagen():void{ 
-
-    this.galeria.imagen = this._imagenService.uploadImage(this.files);
-
-    console.log(this.galeria);
-
-    this._galeriaService.post(this.galeria);
+  CargarGaleria(){
+    return this._imagenService.uploadImage(this.files, this.galeria);
   }
 
 }
