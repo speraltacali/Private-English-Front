@@ -13,10 +13,12 @@ import { AlumnoModule } from './Entidades/Alumno/alumno.module';
 import { HomeModule } from './Entidades/Home/home.module';
 import { JwtInterceptor } from './AUTH/security/jwt.interceptor';
 import { ProfesorModule } from './Entidades/Profesor/profesor.module';
-import { GaleriaComponent } from './Entidades/Empresa/Galeria/galeria.component';
 
 import { BUCKET } from '@angular/fire/storage';
 import { UploadImageModule } from './Shared/Upload-Image/upload-image.module';
+import { GaleriaImageModule } from './Entidades/Empresa/Galeria/Galeria-image/galeria-image.module';
+import { GaleriaModule } from './Entidades/Empresa/Galeria/galeria.module';
+import { HeaderModule } from './Shared/Header/header.module';
 
 //Angular Material
 
@@ -36,7 +38,10 @@ import { UploadImageModule } from './Shared/Upload-Image/upload-image.module';
     HomeModule,
     ProfesorModule,
     UploadImageModule,
-    routing     
+    routing,
+    GaleriaImageModule,
+    GaleriaModule,
+    HeaderModule     
   ],
   providers: [
     { provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},

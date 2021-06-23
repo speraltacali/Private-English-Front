@@ -1,82 +1,93 @@
-<div class="container col-md-6">
-
-  <h1 class="card container">Listo para cargar un nuevo profesor</h1>
+<div class="container">
   
-  <div class="card">
+  <div class="container col-md-6">
+
+    <h1 class="card container">Listo para cargar un nuevo profesor</h1>
   
-  <div class="card-header">
+    <div class="card">
   
-  <div class="card-body">
+      <div class="card-header">
   
-  <form action="">
-
-  <div class="form-group">
-    <label>Apellido:</label>
-    <input type="text" class="form-control" name="apellido" matInput  placeholder="Ingresar Apellido" [(ngModel)]="profesorAux.apellido" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Nombre:</label>
-    <input type="text" class="form-control" name="nombre" matInput placeholder="Ingresar Nombre" [(ngModel)]="profesorAux.nombre" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Dni:</label>
-    <input type="text" class="form-control" name="dni" matInput placeholder="Ingresar Dni" [(ngModel)]="profesorAux.dni" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Cuil:</label>
-    <input type="text" class="form-control" name="cuil" matInput placeholder="Ingresar Cuil" [(ngModel)]="profesorAux.cuil" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Domicilio:</label>
-    <input type="text" class="form-control" name="domicilio" matInput placeholder="Ingresar Domicilio" [(ngModel)]="profesorAux.domicilio" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label  >Email:</label>
-    <input type="text" class="form-control" name="email" matInput placeholder="Ingresar Email" [(ngModel)]="profesorAux.email" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Fecha Nacmiento:</label>
-    <input type="date" class="form-control" name="fechaNacimiento" placeholder="Ingresar Fecha Nacimiento" [(ngModel)]="profesorAux.fechaNacimiento" #name="ngModel">
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <label>Sexo:</label>
-    <input type="radio" name="hombre" value="h" > Hombre
-    <input type="radio" name="mujer" value="m"  > Mujer
-  </div>
-
-  <br>
-
-  <button mat-raised-button color="primary" (click)="GuardarProfesor(profesorAux)" class="btn-crud">Agregar</button>
-  <button mat-raised-button color="danger" [routerLink]= "['/listado']"  class="btn-volver">Volver</button>
-
-  </form>
- 
+        <div class="card-body">
+  
+          <form action="">
+  
+            <div class="form-group">
+              <label>Apellido:</label>
+              <input type="text" class="form-control" name="apellido" matInput placeholder="Ingresar Apellido"
+                [(ngModel)]="profesorAux.apellido" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Nombre:</label>
+              <input type="text" class="form-control" name="nombre" matInput placeholder="Ingresar Nombre"
+                [(ngModel)]="profesorAux.nombre" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Dni:</label>
+              <input type="text" class="form-control" name="dni" matInput placeholder="Ingresar Dni"
+                [(ngModel)]="profesorAux.dni" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Cuil:</label>
+              <input type="text" class="form-control" name="cuil" matInput placeholder="Ingresar Cuil"
+                [(ngModel)]="profesorAux.cuil" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Domicilio:</label>
+              <input type="text" class="form-control" name="domicilio" matInput placeholder="Ingresar Domicilio"
+                [(ngModel)]="profesorAux.domicilio" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="text" class="form-control" name="email" matInput placeholder="Ingresar Email"
+                [(ngModel)]="profesorAux.email" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Fecha Nacmiento:</label>
+              <input type="date" class="form-control" name="fechaNacimiento" placeholder="Ingresar Fecha Nacimiento"
+                [(ngModel)]="profesorAux.fechaNacimiento" #name="ngModel">
+            </div>
+  
+            <br>
+  
+            <div class="form-group">
+              <label>Sexo:</label>
+              <input type="radio" name="hombre" value="h"> Hombre
+              <input type="radio" name="mujer" value="m"> Mujer
+            </div>
+  
+            <br>
+  
+            <button mat-raised-button color="primary" (click)="GuardarProfesor(profesorAux)"
+              class="btn-crud">Agregar</button>
+            <button mat-raised-button color="danger" [routerLink]="['/listado']" class="btn-volver">Volver</button>
+  
+          </form>
+  
+  
+        </div>
+  
+      </div>
+  
+    </div>
   
   </div>
-  
-  </div>
-  
-  </div>
-
-  </div>
+</div>

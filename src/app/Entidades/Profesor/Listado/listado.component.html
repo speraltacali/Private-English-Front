@@ -1,50 +1,50 @@
-<div class="conteiner">
+<div class="container">
 
-<h1 class="card container">Lista de Profesores</h1>
+  <h1 >Lista de Profesores</h1>
 
-<div class="card">
+  <div class="card">
 
-<div class="card-header">
+    <div class="card-header">
 
-<button (click)="Agregar()" class="btn btn-warning">Agregar</button>
+      <button (click)="Agregar()" class="btn btn-warning">Agregar</button>
 
-<div class="card-body">
+      <div class="card-body">
 
-<table class="table table-houver">
-<thead>
+        <table class="table table-houver">
+          <thead>
 
-<tr>
-<th>Id</th>
-<th>Nombre</th>
-<th>Apellido</th>
-<th>Dni</th>
-<th>Cuil</th>
-<th>Sexo</th>
-<th>Fecha Nacimiento</th>
-<th>Domicilio</th>
-</tr>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Dni</th>
+              <th>Cuil</th>
+              <th>Sexo</th>
+              <th>Fecha Nacimiento</th>
+              <th>Domicilio</th>
+            </tr>
 
-</thead>
-<tbody>
+          </thead>
+          <tbody>
 
-<tr *ngFor="let profesor of Profesores" class="text-center">
-  <th>{{profesor.id}}</th>
-  <th>{{profesor.nombre}}</th>
-  <th>{{profesor.apellido}}</th>
-  <th>{{profesor.dni}}</th>
-  <th>{{profesor.cuil}}</th>
-  <th>{{profesor.sexo}}</th>
-  <th>{{profesor.fechaNacimiento}}</th>
-  <th>{{profesor.domicilio}}</th>
-  <button class="btn btn-warning" (click)="Editar(profesor)">Editar</button>
-</tr>
+            <tr *ngFor="let profesor of Profesores" class="text-center">
+              <th>{{profesor.id}}</th>
+              <th>{{profesor.nombre}}</th>
+              <th>{{profesor.apellido}}</th>
+              <th>{{profesor.dni}}</th>
+              <th>{{profesor.cuil}}</th>
+              <th>{{profesor.sexo}}</th>
+              <th>{{profesor.fechaNacimiento}}</th>
+              <th>{{profesor.domicilio}}</th>
+              <button class="btn btn-warning" (click)="Editar(profesor)">Editar</button>
+            </tr>
 
-</tbody>
+          </tbody>
 
-</table>
+        </table>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>

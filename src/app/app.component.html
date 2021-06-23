@@ -1,98 +1,95 @@
-  
-<mat-sidenav-container class="container-bar">
+<mat-sidenav-container>
 
-    <mat-sidenav #drawer mode="side" class="sidenav" mode="side" class="sidenav">
+  <mat-sidenav #drawer mode="side" mode="side" class="sidenav">
 
-        <mat-toolbar class="titulo-izquierdo">Menu Principal</mat-toolbar>
+    <mat-toolbar class="titulo-izquierdo">Menu Principal</mat-toolbar>
 
-        <mat-card *ngIf="session()" class="example-card">
-            <mat-card-header>
-             
-              <mat-card-title > {{ user.usuario }} </mat-card-title>
-              <mat-card-subtitle>Cargo</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>Editar</button>
-              <button mat-button>Eliminar</button>
-            </mat-card-actions>
-          </mat-card>
+    <mat-card *ngIf="session()" class="example-card">
+      <mat-card-header>
 
-        <mat-nav-list class="titulo">
+        <mat-card-title> {{ user.usuario }} </mat-card-title>
+        <mat-card-subtitle>Cargo</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Editar</button>
+        <button mat-button>Eliminar</button>
+      </mat-card-actions>
+    </mat-card>
 
-          <!-- Acceso Administrador-->
+    <mat-nav-list class="titulo">
 
-            <mat-list-item [routerLink]="['/empresa']">Home</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]= "['/solicitud']">Solicitud</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]= "['/novedades']">Novedades</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]= "['/galeria']">Galeria</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]= "['/listado']">Profesor</mat-list-item>
-            <mat-divider></mat-divider>
+      <!-- Acceso Administrador-->
 
-          <!-- Acceso General-->
+      <mat-list-item [routerLink]="['/empresa']">Home</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['/solicitud']">Solicitud</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['/novedades']">Novedades</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['/galeria']">Galeria</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item [routerLink]="['/listado']">Profesor</mat-list-item>
+      <mat-divider></mat-divider>
 
-            <mat-divider></mat-divider>
-            <mat-list-item *ngIf="session()" mat-raised-button (click)="Logout()" color="accent">Cerra Session</mat-list-item>
-        </mat-nav-list>
-        
-    </mat-sidenav>
+      <!-- Acceso General-->
 
+      <mat-divider></mat-divider>
+      <mat-list-item *ngIf="session()" mat-raised-button (click)="Logout()" color="accent">Cerra Session</mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-container>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <div class="container">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-          mat-raised-button class="tituloBlanco" (click)="drawer.toggle();">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+              mat-raised-button class="tituloBlanco" (click)="drawer.toggle();">
               <mat-icon>menu</mat-icon>
-          </button> 
-          <ul></ul>
-          <a class="navbar-brand" href="#">Private English</a>
-          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Informacion de la empresa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Novedades</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Opciones
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Personal</a></li>
-                <li><a class="dropdown-item" href="#">Informacion</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
+            </button>
+            <ul></ul>
+            <a class="navbar-brand" href="#">Private English</a>
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Informacion de la empresa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Novedades</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Opciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Personal</a></li>
+                  <li><a class="dropdown-item" href="#">Informacion</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     </nav>
 
     <br>
 
     <router-outlet></router-outlet>
 
+  </mat-sidenav-container>
 
 </mat-sidenav-container>
-
-
-
-
-
-
-

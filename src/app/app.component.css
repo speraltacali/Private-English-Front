@@ -1,4 +1,7 @@
 
+mat-sidenav-container{
+    height: 100%;
+}
 
 .button-login{
     position: absolute;
@@ -44,14 +47,7 @@
 
 .sidenav{
     background-color: rgb(235, 116, 36);
-    height: 100%;
     width: 300px;
-    
-}
-
-.container-bar{
-    height: 1000px;
-    width: 100%;
     
 }
 

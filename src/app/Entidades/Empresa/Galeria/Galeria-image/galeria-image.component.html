@@ -1,75 +1,77 @@
-<div class="row">
-    <div class="col-md-4 mt-5" >
-        <div class="card">
-            <div class="card-header">
-                <span>Archivos</span>
-            </div>
-            <div class="card-body">
-                <div 
-                    appNgGaleriaFiles 
-                    [files]="files"
-                    (mouseOver)="isOverDrop = $event"
-                    [ngClass]="{ 'file-over': isOverDrop }"
-                    class="drop-zone">
-                    Drop-zone
-                   <h4>Drop here your images</h4>
-                     <img src="https://raw.githubusercontent.com/bezael/Login_Angular_9_Firebase_Bootstrap_4/master/src/assets/img/cloud.png" alt="drop-images">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-5" >
+            <div class="card">
+                <div class="card-header">
+                    <span>Archivos</span>
                 </div>
-                
-                <div>
-                    <mat-form-field class="input-titulo">
-                        <mat-label>Titulo</mat-label>
-                        <textarea matInput  [(ngModel)]="galeria.titulo" placeholder="Ingrese el titulo de la imagen."></textarea>
-                    </mat-form-field>
+                <div class="card-body">
+                    <div 
+                        appNgGaleriaFiles 
+                        [files]="files"
+                        (mouseOver)="isOverDrop = $event"
+                        [ngClass]="{ 'file-over': isOverDrop }"
+                        class="drop-zone">
+                        Drop-zone
+                       <h4>Drop here your images</h4>
+                         <img src="https://raw.githubusercontent.com/bezael/Login_Angular_9_Firebase_Bootstrap_4/master/src/assets/img/cloud.png" alt="drop-images">
+                    </div>
+                    
+                    <div>
+                        <mat-form-field class="input-titulo">
+                            <mat-label>Titulo</mat-label>
+                            <textarea matInput  [(ngModel)]="galeria.titulo" placeholder="Ingrese el titulo de la imagen."></textarea>
+                        </mat-form-field>
+                    </div>
+    
                 </div>
-
             </div>
         </div>
-    </div>
-    <div class="col-md-8 mt-5">
-        <div class="card">
-            <div class="card-header">
-                <h4>Listado de Archivos</h4>
-            </div>
-
-            <div class="card-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>File name</th>
-                            <th>Size</th>
-                            <th>Progress</th>
-                            <th>URL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let file of files">
-                            <td>{{file.name}}</td>
-                            <td>{{ file.file.size / 1024 | number: ".2-2" }} KB</td>
-                            <td *ngIf="file.uploadPercent | async as uploadPercent">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" [ngStyle]="{width : uploadPercent + '%'}">
-                                        {{uploadPercent | number: "1.0-0"}} %
+        <div class="col-md-8 mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Listado de Archivos</h4>
+                </div>
+    
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>File name</th>
+                                <th>Size</th>
+                                <th>Progress</th>
+                                <th>URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let file of files">
+                                <td>{{file.name}}</td>
+                                <td>{{ file.file.size / 1024 | number: ".2-2" }} KB</td>
+                                <td *ngIf="file.uploadPercent | async as uploadPercent">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" [ngStyle]="{width : uploadPercent + '%'}">
+                                            {{uploadPercent | number: "1.0-0"}} %
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td *ngIf="file.downloadURL | async as downloadURL"> 
-                                <a [href]="downloadURL" target="_blank">Download URL</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="container-buttons">
-                    <button (click)="files = null" class="btn btn-danger">
-                        Borrar todo
-                    </button>
-                    <button (click)="CargarGaleria()" [disabled]="files === null" class="btn btn-primary btn-sm ml-auto">
-                        Subir
-                    </button>
+                                </td>
+                                <td *ngIf="file.downloadURL | async as downloadURL"> 
+                                    <a [href]="downloadURL" target="_blank">Download URL</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="container-buttons">
+                        <button (click)="files = null" class="btn btn-danger">
+                            Borrar todo
+                        </button>
+                        <button (click)="CargarGaleria()" [disabled]="files === null" class="btn btn-primary btn-sm ml-auto">
+                            Subir
+                        </button>
+                    </div>
                 </div>
+    
             </div>
-
+    
         </div>
-
     </div>
 </div>
