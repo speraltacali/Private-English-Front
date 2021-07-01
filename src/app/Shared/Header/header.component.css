@@ -1,0 +1,57 @@
+
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav{
+    height: 1000px;
+}
+
+.button-login{
+    position: absolute;
+    right: 10px;
+}
+
+.title{
+    position: absolute;
+    left: 70px;
+}
+
+.sidenav-content{
+    position: relative;
+    top: auto;
+}
+
+
+.container { 
+    background: white; 
+    max-width: 100%;
+   }
+
+
+.perfil{
+    max-width: 100%;
+}
+
+.titulo{
+    background-color: rgb(235, 116, 36);
+}
+
+.tituloBlanco{
+    background-color: rgb(255, 255, 255);
+}
+
+.colorLogout{
+    background-color:black;
+}
+
+.titulo-izquierdo{
+    background-color: rgb(236, 89, 20);
+}
+
+.sidenav{
+    background-color: rgb(235, 116, 36);
+    width: 300px;
+    
+}
+

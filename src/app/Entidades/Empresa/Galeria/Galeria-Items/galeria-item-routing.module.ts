@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GaleriaImageComponent } from './galeria-image.component';
+import { GaleriaItemComponent } from './galeria-item.component';
 
 const routes: Routes = [
-  {path:'galeria-image' , component: GaleriaImageComponent}
+  {path:'galeria-item' , component: GaleriaItemComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class GaleriaImageRoutingModule { }
+export class GaleriaItemRoutingModule { }

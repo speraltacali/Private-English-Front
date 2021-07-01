@@ -16,20 +16,16 @@ import { NgGaleriaFilesDirective } from './Galeria/Directives/galeria-image.dire
 @NgModule({
   declarations: [
     EmpresaComponent,
-    GaleriaComponent,
-    NgGaleriaFilesDirective,
-    GaleriaItemComponent,
-    NovedadesComponent,
-    GaleriaImageComponent
+    NovedadesComponent
   ],
   imports: [
     CommonModule,
     EmpresaRoutingModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports:[
     EmpresaComponent
-  ],
-  entryComponents:[GaleriaItemComponent]
+  ]
+  
 })
 export class EmpresaModule { }

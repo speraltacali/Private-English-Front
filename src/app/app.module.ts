@@ -19,13 +19,15 @@ import { UploadImageModule } from './Shared/Upload-Image/upload-image.module';
 import { GaleriaImageModule } from './Entidades/Empresa/Galeria/Galeria-image/galeria-image.module';
 import { GaleriaModule } from './Entidades/Empresa/Galeria/galeria.module';
 import { HeaderModule } from './Shared/Header/header.module';
+import { HeaderComponent } from './Shared/Header/header.component';
+import { GaleriaItemModule } from './Entidades/Empresa/Galeria/Galeria-Items/galeria-item.module';
 
 //Angular Material
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { HeaderModule } from './Shared/Header/header.module';
     routing,
     GaleriaImageModule,
     GaleriaModule,
-    HeaderModule     
+    HeaderModule,
+    GaleriaItemModule     
   ],
   providers: [
     { provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},

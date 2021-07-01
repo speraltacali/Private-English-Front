@@ -9,7 +9,7 @@ Response
   templateUrl: './galeria-item.component.html',
   styleUrls: ['./galeria-item.component.css']
 })
-export class GaleriaItemComponent implements OnInit {
+export class GaleriaItemComponent{
 
   galeria: Galeria = {titulo:'',imagen:'',estado:false,eliminado:false,empresaId:1};
 
